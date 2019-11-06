@@ -1,6 +1,6 @@
-import React, { useReducer, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
-import { appReducer, initialState} from '../reducers/Reducer'
+
 
 
 const InputForm = props => {

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
 import TodoItem from './TodoItem';
@@ -12,9 +11,10 @@ const TodoList = (props) => {
                <TodoItem
                key={item.id} 
                item={item}
+               dispatch={props.dispatch}
                />
            ))}
-           {/* <ClearButton className="clearButton" onClick={props.filterDone} >Remove Obstacles</ClearButton>      */}
+           <ClearButton className="clearButton" onClick={() => props.dispatch({type: "CLEAR_COMPLETED_TODOS"})}>Remove Complete</ClearButton>     
         </TodoListItems>
     );
 }
@@ -28,7 +28,7 @@ const TodoListItems = styled.div`
 `;
 
 const ClearButton = styled.button`
-    width: 40%;
+    width: 50%;
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
@@ -36,4 +36,5 @@ const ClearButton = styled.button`
     font-family: 'Montserrat', sans-serif;
     color: #2e8ea0;
     border: 2px solid #2e8ea0;
+    margin-bottom: 50px;
 `;
