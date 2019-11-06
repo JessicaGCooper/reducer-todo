@@ -1,0 +1,23 @@
+
+
+.todo {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    background: lightseagreen;
+}
+
+.todoCompleted {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    background: lightseagreen;
+    text-decoration: line-through;
+    color: red;
+}
